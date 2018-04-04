@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Home/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-brand" href="#">Proxy Free</div>
+        <ul>
+            <li><a href="/" >Home</a></li>
+            <li><a href="/home/upload" class="active" >Upload Socks</a></li>
+            <li><a href="/home/checklive">Check Live</a></li>
+            <li><a href="/home/contactme">Contact Me</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div style="margin-top:60px" class="container ng-scope">
+
+    <div style="margin-top:60px" class="container ng-scope">
+        <title>Upload Proxy</title>
+        <div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Upload Proxy</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <form action="upload" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select class="form-control" id="proxy-type" name="proxy-type">
+                        <option value="socks5">Socks 5</option>
+                        <option value="ssh">SSH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile" name="fileToUpload">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
